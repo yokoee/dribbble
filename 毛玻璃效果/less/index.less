@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    #main-wrap{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,.5);
+        color: #222;        
+        }
+        aside{
+            width: 180px;
+            height: e("calc(100% - 60px)");
+            // height: calc(~"100% - 60px");
+            margin: 30px;
+            background: rgba(255,255,255,.5);
+            .avatar{
+                margin: 20px auto 0;
+                width: 50px;
+                height: 50px;
+                background: url(../img/avatar.png) 0 / cover;
+                border-radius: 50%;
+            }
+            .user-name{
+                text-align: center;
+                margin-top: 10px;
+            }
+            .user-state{
+                text-align: center;
+                color: rgb(20, 214, 124);
+                font-size: .9rem;
+                margin: 5px 0;
+                &:before{
+                    content: '● ';
+                }
+            }
+            .btn-account{
+                background-color:rgb(20, 214, 124);
+                color: white;
+                margin: auto;
+                padding: 4px;
+                font-size: .9rem;
+                text-align: center;
+                border-radius: 15px;
+                width: 6em;
+                cursor: pointer;
+            }
+            .nav{
+                ul{
+                    list-style: none;
+                    padding: 0;
+                    margin-top: 50px;
+                    user-select: none;
+                    font-size: .9rem;
+                    li{
+                        line-height: 35px;
+                        box-shadow: 0 -1px 1px lightgray;
+                        cursor: pointer;
+                        &:last-child{
+                          box-shadow : 0 -1px 1px lightgray,
+                                         0 1px 1px lightgray;
+                        }
+                        &:before{
+                            content: '●';
+                            margin-left: 15px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+}
+
+.blur{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px lightgray;
+    border-radius: 5px;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right:0;
+        filter: blur(30px);
+        margin: -30px;
+        z-index: -1;
+        background: url(../img/bg.jpg) 0 / cover fixed;             
+    }
+}
+

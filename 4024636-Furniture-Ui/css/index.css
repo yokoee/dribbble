@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+}
+
+.left {
+    position: relative;
+    flex-basis: 40%;
+    height: 100%;
+}
+
+.right {
+    flex-basis: 60%;
+    height: 100%;
+    background-color: lightgreen;
+}
+
+.contact-info {
+    position: absolute;
+    top: 50%;
+    transform: rotateZ(-90deg) translateY(-80px);
+}
+
+.contact-info>* {
+    display: inline-block;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: black;
+}
+
+.text-detail {
+    float: right;
+    width: 300px;
+    margin: 0 50px;
+}
+
+.text-title {
+    margin-top: 2em;
+    text-shadow: -50px -20px 1px #e2e2e2;
+}
+
+.text-body {
+    line-height: 2em;
+}
+
+.text-more {
+    text-align: right;
+}
+
+.text-more>a {
+    color: black;
+    text-decoration: none;
+}
+
+.other-product {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-color: #ededed;
+    right: 0;
+    bottom: 0;
+    transform: translateX(60px);
+    z-index: 5;
+}
+
+.other-product>.other-img {
+    width: 150px;
+    height: 150px;
+    margin: 25px 22px;
+    transform: translateX(-60px);
+}
+
+.right>header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px solid lightgray;
+    z-index: 5;
+}
+
+.right>header>ul {
+    list-style: none;
+    margin: 0;
+}
+
+.right>header>ul>li {
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.right>header>ul>li.nav-selected {
+    border-bottom: 2px solid white;
+}
+
+.header-btn {
+    margin: 0 10px !important;
+}
+
+#header-user>i {
+    width: 25px;
+    height: 25px;
+    line-height: 60px;
+    vertical-align: middle;
+    display: inline-block;
+    background-image: url(../img/ic_user.svg);
+    background-size: cover;
+}
+
+#header-search>i {
+    width: 25px;
+    height: 25px;
+    line-height: 60px;
+    vertical-align: middle;
+    display: inline-block;
+    background-image: url(../img/ic_search.svg);
+    background-size: cover;
+}
+
+#picture {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+}
+
+#picture>.picture-img {
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    transition: transform 1s;
+}
+
+#chair-1 {
+    background-image: url(../img/chair-1.jpg);
+    background-size: cover;
+}
+
+#chair-2 {
+    background-image: url(../img/chair-2.jpg);
+    background-size: cover;
+}
+
+#chair-3 {
+    background-image: url(../img/chair-3.jpg);
+    background-size: cover;
+}
+
+#position {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#position>.position-bar {
+    width: 3px;
+    height: 30px;
+    background-color: gray;
+    margin: 40px 30px;
+}
+
+#position>.position-selected {
+    background-color: white;
+}
+
+#picture-btns {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    user-select: none;
+}
+
+.picture-btn {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.picture-btn>svg {
+    position: absolute;
+}
+
+
+/* #btn-process {
+    animation: process 8s infinite;
+} */
+
+@keyframes process {
+    from {
+        stroke-dasharray: 0px, 151px;
+    }
+    to {
+        stroke-dasharray: 151px, 151px;
+    }
+}
+
+.picture-btn>i {
+    display: inline-block;
+    line-height: 50px;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#btn-forward i {
+    background-image: url(../img/ic_arrow_forward.svg);
+}
+
+#btn-back i {
+    background-image: url(../img/ic_arrow_back.svg);
+}

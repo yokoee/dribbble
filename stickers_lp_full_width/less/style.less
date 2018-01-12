@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    overflow: hidden;
+    background-color: #39c4ff;
+}
+@nav-height: 80px;
+@nav-item-height: 2.5em;
+
+#main{
+    header{
+        width: 100%;
+        height: @nav-height;
+        background: transparent;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            line-height: @nav-height;
+            float: right;
+            li.header-item{
+                display: inline-block;
+                color: white;
+                padding: 5px 20px;
+                line-height: @nav-item-height;
+                cursor: pointer;
+            }
+        }
+    }
+}
+#nav{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: @nav-height;
+    background-color: white;
+    text-align: center;
+    user-select: none;
+    .create {
+        position: relative;
+        display: inline-block;
+        height: @nav-height;
+        vertical-align: top;
+        border-top: 2px inset #ee437a;
+        span{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            color: white;
+            background-color: #3ac8ff;
+            padding: 0 20px;
+            margin: auto;
+            line-height: @nav-item-height;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .message{
+            position: absolute;
+            height: 2em;
+            width: 200px;
+            transform: translateX(-50px) translateY(-(@nav-height+20px));
+            background-color: #4d90b0;
+            border-radius: 50px;
+            p{
+                margin: 0;
+                line-height: 2em;
+                color: white;                
+            }
+            &::after{
+                content:'';
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                transform: translateX(-50%);
+                border-top: 10px solid #4d90b0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+            }
+        }
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        line-height: @nav-height;    
+        li.nav-item{
+            display: inline-block;
+            padding: 0 20px;
+            cursor: pointer;
+            line-height: @nav-item-height;
+            border-radius: 20px;            
+            &:hover{
+                background-color: #3ac8ff;
+                color: white;
+            }
+        }
+    }
+}
